@@ -1,0 +1,30 @@
+{% extends "chat/layout.html" %}
+{% load static %}
+
+
+{% block body %}
+    <aside class="sidebar" aria-label="sidebar">
+        <div style="display:flex;gap:8px">
+            <button class="btn" id="newGroupBtn">Create New Group</button>
+        </div>
+        {% if user.is_authenticated %}
+        <div class="chats" id="chatList" role="list">
+            <h5 class="text-muted">Groups</h5>
+            {% for room in rooms %}
+            <h1><a href="{% url 'room' room.name %}">{{room.name}}</a></h1>
+            {% endfor %}
+            {% endif %}
+        </div>
+    </aside>
+    <main class="main">
+        <section class="welcome" aria-labelledby="welcomeTitle">
+        <h1 id="welcomeTitle">Welcome back, {{user.username}}</h1>
+        <p class="text-muted">Create or join a group chat.</p>
+        </section>
+        <button type="submit" class="btn btn-primary" id="crt">Create Room</button>
+    </main>
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'chat/chat.js' %}"></script>
+{% endblock %}
