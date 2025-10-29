@@ -27,7 +27,7 @@ This project is distinct from prior CS50 projects because :
 /Capstone/
 - init.py
 - asgi.py #ASGI entry point (required for WebSockets)
-settings.py # Project settings
+- settings.py # Project settings
 urls.py # Root URL configuration
 wsgi.py
 chat/ # Main Django app
