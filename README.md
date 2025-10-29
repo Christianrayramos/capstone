@@ -30,7 +30,8 @@ This project is distinct from prior CS50 projects because :
 - settings.py Project settings
 - urls.py Root URL configuration
 - wsgi.py
-- chat/ Main Django app
+
+ chat/ Main Django app
 - static/chat/
 - style.css Custom styling
 - chat.js JavaScript for WebSocket message handling
