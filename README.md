@@ -25,8 +25,8 @@ This project is distinct from prior CS50 projects because :
 ## File Contents
 
 /Capstone/
-init.py
-asgi.py # ASGI entry point (required for WebSockets)
+- init.py
+- asgi.py #ASGI entry point (required for WebSockets)
 settings.py # Project settings
 urls.py # Root URL configuration
 wsgi.py
@@ -59,7 +59,8 @@ README.md # Project documentation (this file)
 
 ## How to Run this Application
 - Clone the repository to your local machine and navigate into the project directory
-- Create a virtual environment using python -m venv venv and activate it (source venv/bin/activate on macOS/Linux or venv\Scripts\activate on Windows).
+- Create a virtual environment using python -m venv venv and activate it (source venv/bin/activate on macOS/Linux or             
+venv\Scripts\activate on Windows).
 - Install dependencies listed in the requirements.txt file by running pip install -r requirements.txt.
 - Apply database migrations using python manage.py makemigrations followed by python manage.py migrate.
 - Start the development server by running python manage.py runserver.
