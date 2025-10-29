@@ -25,38 +25,36 @@ This project is distinct from prior CS50 projects because :
 ## File Contents
 
 /Capstone/
-│├── init.py
-│ ├── asgi.py # ASGI entry point (required for WebSockets)
-│ ├── settings.py # Project settings
-│ ├── urls.py # Root URL configuration
-│ └── wsgi.py
- | 
-├── chat/ # Main Django app
-│ ├── static/chat/
-│ │ ├── style.css # Custom styling
-│ │ └── chat.js # JavaScript for WebSocket message handling
-│
-│ ├── templates/chat/
-│ │ ├── layout.html # Base layout for all pages
-│ │ ├── index.html # Homepage (list of rooms, private chats)
-│ │ ├── room.html # Individual chat room interface
-│ │ └── private.html # Private messaging UI
+init.py
+asgi.py # ASGI entry point (required for WebSockets)
+settings.py # Project settings
+urls.py # Root URL configuration
+wsgi.py
+chat/ # Main Django app
+static/chat/
+style.css # Custom styling
+chat.js # JavaScript for WebSocket message handling
+templates/chat/
+layout.html # Base layout for all pages
+index.html # Homepage (list of rooms, private chats)
+room.html # Individual chat room interface
+private.html # Private messaging UI
 
-│ ├── init.py
-│ ├── admin.py # Registers chat models in Django admin
-│ ├── apps.py
-│ ├── consumers.py # WebSocket Consumers (handles real-time messages)
-│ ├── forms.py # Django forms 
-│ ├── models.py # Chat models (User, Room, Message)
-│ ├── routing.py # WebSocket URL routing configuration
-│ ├── urls.py # Standard Django URLs
-│ ├── views.py # Renders templates and handles HTTP requests
-├── chatconnect/ # Django project configuration folder
-│ │
-├── db.sqlite3 # SQLite database for local development
-├── manage.py # Django management utility
-├── requirements.txt # Dependencies list
-└── README.md # Project documentation (this file)
+init.py
+admin.py # Registers chat models in Django admin
+apps.py
+consumers.py # WebSocket Consumers (handles real-time messages)
+forms.py # Django forms 
+models.py # Chat models (User, Room, Message)
+routing.py # WebSocket URL routing configuration
+urls.py # Standard Django URLs
+views.py # Renders templates and handles HTTP requests
+chatconnect/ # Django project configuration folder
+
+db.sqlite3 # SQLite database for local development
+manage.py # Django management utility
+requirements.txt # Dependencies list
+README.md # Project documentation (this file)
 
 
 ## How to Run this Application
