@@ -1,4 +1,4 @@
-#CS50 Web Programming with Python and Javascript
+# CS50 Web Programming with Python and Javascript
 ## Capstone Project Chat App (Real-Time Messaging App)
 
 ### Overview
