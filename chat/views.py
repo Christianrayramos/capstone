@@ -7,19 +7,28 @@ from .models import User, Room, Message
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404, redirect
-from . forms import MessageForm
+from .forms import MessageForm, RoomForm
 
 # Create your views here.
 @csrf_exempt
 def index(request):
     if request.user.is_authenticated:
-        return render(request, "chat/index.html",{
-            "rooms": Room.objects.filter(participants=request.user)
-        })
+        if request.method == "POST":
+            form = RoomForm(request.POST)
+            if form.is_valid():
+                room = form.save()
+                room.participants.add(request.user)
+                return redirect("room", room_name=room.name)
+        else:
+            form = RoomForm()   # ✅ this now works fine
 
-    # Everyone else is prompted to sign in
+        return render(request, "chat/index.html", {
+            "rooms": Room.objects.filter(participants=request.user),
+            "form": form,
+        })
     else:
         return HttpResponseRedirect(reverse("login"))
+
 
 
 def room(request, room_name):
