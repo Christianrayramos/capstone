@@ -57,6 +57,10 @@
     flex:1;padding:36px 40px;display:flex;flex-direction:column;gap:18px;align-items:stretch;align-items: center;
     }
 
-.welcome{margin-top: -40px; text-align:center}
+.welcome{margin-top: -250px; text-align:center}
 .welcome h1{font-size:39px;margin:0}
 .welcome p{color:var(--muted);margin-top:8px}
+
+#crt{
+    margin-top: -250px; text-align:center
+}

@@ -11,7 +11,7 @@
         <div class="chats" id="chatList" role="list">
             <h5 class="text-muted">Groups</h5>
             {% for room in rooms %}
-            <h1><a href="{% url 'room' room.name %}">{{room.name}}</a></h1>
+            <h1><a href="{% url 'room' room.name %}"  style="white-space: nowrap;">{{room.name}}</a></h1>
             {% endfor %}
             {% endif %}
         </div>
